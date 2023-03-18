@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+
+    {%block content%}
+        
+        <div class="container">
+            <div class="col-xs-4">
+
+                <h4>Max: {{maximo}}</h4>
+                <h4>Min: {{minimo}}</h4>
+                <h4>Promedio: {{promedio}}</h4>
+                <br>
+                <h4>Repetidos</h4>
+                <ul style="list-style: none;">
+                    {% for index,i in repetidos.items() %}
+                    <li style="color: red; font-size: 20px; padding-top: 5px;">{{index}} --> {{i}} veces</li>
+                    {% endfor %}
+                </ul>
+
+
+            </div>
+        </div>
+
+    {%endblock%}
